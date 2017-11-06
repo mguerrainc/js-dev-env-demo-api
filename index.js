@@ -19,6 +19,24 @@ app.get('/users', function(req, res) {
   ]);
 });
 
+app.get('/labels', function(req, res) {
+  // Hard coding for simplicity. Pretend this hits a real database
+  res.json([
+    {"id": 1,"name":"US Magnesium (pallets only)","pallets":"Y","master":"N"},
+    {"id": 1,"name":"Dow (pallets and master)","pallets":"Y","master":"Y"},
+    {"id": 1,"name":"Toyota (master only)","pallets":"Y","master":"N"}
+  ]);
+});
+
+app.get('/pallets', function(req, res) {
+  // Hard coding for simplicity. Pretend this hits a real database
+  res.json([
+    {"id": 1,"lotNo": 17123060112},
+    {"id": 2,"lotNo": 17123060113},
+    {"id": 3,"lotNo": 17123060114}
+  ]);
+});
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port')); 
 });
