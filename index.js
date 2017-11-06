@@ -23,8 +23,8 @@ app.get('/labels', function(req, res) {
   // Hard coding for simplicity. Pretend this hits a real database
   res.json([
     {"id": 1,"name":"US Magnesium (pallets only)","pallets":"Y","master":"N"},
-    {"id": 1,"name":"Dow (pallets and master)","pallets":"Y","master":"Y"},
-    {"id": 1,"name":"Toyota (master only)","pallets":"N","master":"Y"}
+    {"id": 1,"name":"Dow (pallets and master)","pallets":"Y","master":"Y", "masterCopies": 1},
+    {"id": 1,"name":"Toyota (master only)","pallets":"N","master":"Y", "masterCopies": 2}
   ]);
 });
 
