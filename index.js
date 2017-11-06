@@ -11,7 +11,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/users', function(req, res) {
-  // Hard coding for simplicity. Pretend this hits a real database
+  // Hard coding for simplicity. Pretend this hits a real database server
   res.json([
     {"id": 1,"firstName":"Bob","lastName":"Smith","email":"bob@gmail.com"},
     {"id": 2,"firstName":"Tammy","lastName":"Norton","email":"tnorton@yahoo.com"},
@@ -24,7 +24,7 @@ app.get('/labels', function(req, res) {
   res.json([
     {"id": 1,"name":"US Magnesium (pallets only)","pallets":"Y","master":"N"},
     {"id": 1,"name":"Dow (pallets and master)","pallets":"Y","master":"Y"},
-    {"id": 1,"name":"Toyota (master only)","pallets":"Y","master":"N"}
+    {"id": 1,"name":"Toyota (master only)","pallets":"N","master":"Y"}
   ]);
 });
 
